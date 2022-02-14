@@ -35,50 +35,6 @@ $cc = new ClientController();
     <?php include "views/client/homepage/content.php";?>
     <?php include "views/client/homepage/aboutus.php";?>
     <?php include "views/client/layout/footer.php";?>
-
-    <section id="wrapper">
-        <header>
-            <section>Logo</section>
-            <section>Banner</section>
-        </header>
-        <nav>
-            <section><a href="?request=home">Home</a></section> <!-- thiết lập request -->
-            <section><a href="?request=news">News</a></section>
-            <section><a href="?request=feedback">Feedback</a></section>
-            <section><a href="?request=cart">Cart</a></section>
-            <?php if (empty($_SESSION['user'])) : ?>
-                <section><a href="?request=signin">Sign In</a></section>
-                <section><a href="?request=register">Register</a></section>
-            <?php else : ?>
-                <section>Hello: <?= $_SESSION['user']; ?></section>
-                <section><a href="?request=signout">Sign out</a></section>
-            <?php endif; ?>
-        </nav>
-        <section class="body">
-            <aside>
-                <ul style="list-style: none; padding-left: 10px">
-                    <?php foreach ($cc->brands as $item) : ?>
-                        <li style="text-align: left;"><a href="?request=filterProd&brand=<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
-            </aside>
-            <article>
-                <?php $cc->routes(); ?>
-            </article>
-            <aside>
-                <form action="?request=view">
-                    <input type="search" name="key" placeholder="search here">
-                    <input type="submit" value="Search">
-                </form>
-                <div style="display: flex; flex-wrap: wrap">
-                    <?php foreach ($cc->prices as $item) : ?>
-                        <a style="font-size: 10px;" href="?request=filterProd&fromPrices=<?= $item['fromPrice'] ?>&toPrices=<?= $item['toPrice'] ?>"><?= number_format($item['fromPrice'], 0, ',', '.') . '$ -' . number_format($item['toPrice'], 0, ',', '.') . '$' ?></a>
-                    <?php endforeach; ?>
-                </div>
-            </aside>
-        </section>
-        <footer>footer</footer>
-    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
