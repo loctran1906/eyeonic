@@ -3,7 +3,7 @@
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="col-sm-3 left">
-                    <a class="navbar-brand" href="#"><img src="img/header/logo.jpg"></a>
+                    <a class="navbar-brand" href="?request=home"><img src="img/header/logo.jpg"></a>
                 </div>
                 <div class="col-sm-9 right">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
                                 <a class="nav-link" href="?request=contact">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sitemap</a>
+                                <a class="nav-link" href="?request=sitemap">Sitemap</a>
                             </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">

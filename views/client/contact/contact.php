@@ -11,11 +11,11 @@
         </div>
     </div>
 </div>
-<div class="contact " style="background-image: url('img/banner/bg-contact.jpg');">
+<div class="contact ">
     <div class="container flex-center contact-content">
         <div class="row">
             <div class="col-sm-6">
-                <form> 
+                <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Email</label>
@@ -28,10 +28,10 @@
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="phonenumber">Phone number</label>
+                        <label for="phonenumber">Your phone</label>
                         <input type="number" class="form-control" id="phonenumber" placeholder="">
                     </div>
                     <div class="form-row">
@@ -39,7 +39,11 @@
                             <label for="fullname">Full name</label>
                             <input type="text" class="form-control" id="fullname">
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-2">
+                            <label for="age">Ages</label>
+                            <input type="number" class="form-control" id="age">
+                        </div>
+                        <div class="form-group col-md-2">
                             <label for="inputState">Gender</label>
                             <select id="inputState" class="form-control">
                                 <option selected>---Choose---</option>
@@ -55,7 +59,7 @@
                             <label class="form-check-label" for="gridCheck">Would you like to become our member?</label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" class="btn btn-primary">Send your message</button>
                 </form>
             </div>
             <div class="col-sm-6">
@@ -67,5 +71,12 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="location">
+        <form action="#" onsubmit="showAddress(this.address.value); return false">
+            <div class="row">
+                <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed"></iframe>
+            </div>
+        </form>
     </div>
 </div>

@@ -69,6 +69,9 @@ class ClientController
                 case 'contact':
                     include "views/client/contact/contact.php";
                     break;
+                case 'sitemap':
+                    include "views/client/sitemap/sitemap.php";
+                    break;
             endswitch;
         else :
             $prod = $this->cm->fillProd();
