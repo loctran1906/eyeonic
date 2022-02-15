@@ -16,7 +16,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-
                         <div class="sort-by">
                             <div class="title">Sort by</div>
                             <div>
@@ -41,257 +40,134 @@
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="tab-content pt-3" id="myTabContent">
-                <div class="tab-pane fadein active" id="all">
-                    <div class="row" id="datapagi">
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p1.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p2.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p3.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p4.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p5.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
+            <div class="row" id="datapagi">
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p1.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="eyeglasses">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p1.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p2.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p3.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="sunglasses">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p1.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="lens">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p1.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p2.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="glasses">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="item-product">
-                                <div><img src="img/product/p6.png" alt=""></div>
-                                <h3>Ruby – Mirrored Bronze lenses</h3>
-                                <div class="flex-center price">
-                                    <span>Giá: 2.000.000đ</span>
-                                    <span>Hãng: Persol</span>
-                                </div>
-                            </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p2.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p3.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p4.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p5.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item-product">
+                        <div><img src="img/product/p6.png" alt=""></div>
+                        <h3>Ruby – Mirrored Bronze lenses</h3>
+                        <div class="flex-center price">
+                            <span>Giá: 2.000.000đ</span>
+                            <span>Hãng: Persol</span>
                         </div>
                     </div>
                 </div>
