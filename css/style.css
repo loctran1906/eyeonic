@@ -249,6 +249,7 @@ img {
 /* content */
 .content {
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 .content .title {
   justify-content: center;
@@ -341,7 +342,7 @@ img {
   text-align: center;
 }
 .location ul.flex-center li label {
-  width: 100%;
+  width: 100%; color: rgba(0, 0, 255, 0.859);
 }
 .location ul.flex-center li div i {
   font-size: 100px;
@@ -368,3 +369,6 @@ img {
 .sitemap {
   padding: 50px 0;
 }
+
+/* product */
+.detail-title {width: 40%; text-align: center;}
