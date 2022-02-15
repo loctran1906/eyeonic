@@ -72,11 +72,36 @@
             </div>
         </div>
     </div>
-    <div class="location">
-        <form action="#" onsubmit="showAddress(this.address.value); return false">
-            <div class="row">
-                <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed"></iframe>
+</div>
+
+<div class="location">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h3>You can find us at the location in the map below</h3>
             </div>
-        </form>
+            <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed" alt='fullscreen' style="width: 100%; height:300px; margin :30px 0"></iframe>
+            <div>
+                <ul class="row flex-center" style="list-style: none;">
+                    <li class="col-md-4">
+                        <div><i class="fa fa-map-marker"></i></div>
+                        <label for="address">Address: </label>
+                        <Address id="address"><a href="#">412 Ngọc Thuỵ, Ngọc Thụy, Long Biên, Hà Nội, Việt Nam</a></Address>
+                    </li>
+                    <li class="space col-md-4">
+                        <div><i class="fa fa-envelope-o"></i></div>
+                        <label for="email">Our email: </label>
+                        <Address id="email"><a href="mailto:loc.td.1833@aptechlearning.com.vn">loc.td.1833@aptechlearning.com.vn</a><br>Shoot us an email and we'll get back to you within 24-48 hours.</Address>
+                    </li>
+                    <li class="col-md-4">
+                        <div><i class="fa fa-phone"></i></div>
+                        <label for="phone">Hotline: </label>
+                        <Address id="phone"><a href="tel:855-393-2664">1-855-EYEONIC (855-393-2664)</a>
+                           <br> Mon.- Sat. 7 a.m.- 5 p.m. <br>PST
+                            Sun. Closed</Address>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

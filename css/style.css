@@ -309,7 +309,7 @@ img {
 
 /* contact */
 .contact {
-  padding: 150px 0;
+  padding: 150px 0 50px 0;
   background-size: cover;
   height: auto;
   background-position: center;
@@ -325,5 +325,45 @@ img {
   box-shadow: 5px 5px 10px;
   background: #fff;
 }
+.location {
+  padding: 50px 0;
+}
+.location ul.flex-center li {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.location ul.flex-center li div {
+  text-align: center;
+}
+.location ul.flex-center li label {
+  width: 100%;
+}
+.location ul.flex-center li div i {
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.42);
+}
+.space {
+  position: relative;
+}
+.space::before,
+.space::after {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.448);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.space::after {right: 0;}
+.space::before {left: 0;}
 /* sitemap */
-.sitemap {padding: 50px 0;}
+.sitemap {
+  padding: 50px 0;
+}
