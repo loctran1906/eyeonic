@@ -16,17 +16,18 @@
                                 <a class="nav-link" href="?request=home">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About us</a>
+                                <a class="nav-link" href="?request=aboutus">About us</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Product
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Glasses</a>
-                                    <a class="dropdown-item" href="#">Sun Glasses</a>
+                                    <a class="dropdown-item" href="?request=eyeglasses">Eyeglasses</a>
+                                    <a class="dropdown-item" href="?request=glasses">Glasses</a>
+                                    <a class="dropdown-item" href="?request=sunglasses">Sun Glasses</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Lens</a>
+                                    <a class="dropdown-item" href="?request=lens">Lens</a>
                                 </div>
                             </li>
                             <li class="nav-item">

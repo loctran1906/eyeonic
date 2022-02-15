@@ -64,7 +64,6 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  overflow: hidden;
   z-index: 999;
 }
 .header ul {
@@ -178,10 +177,12 @@ img {
   width: 50%;
   z-index: 2;
 }
-
+.about-grid {padding: 50px 0;}
+.about-grid .item {padding: 20px;}
+.about-grid .item div.flex-center {flex-wrap: wrap;}
 /* sản phẩm mới */
 .new-product {
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 .new-product .slider-nav {
   padding: 0 25%;

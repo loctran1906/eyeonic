@@ -72,6 +72,21 @@ class ClientController
                 case 'sitemap':
                     include "views/client/sitemap/sitemap.php";
                     break;
+                case 'aboutus':
+                    include "views/client/aboutus/aboutus.php";
+                    break;
+                case 'eyeglasses':
+                    include "views/client/product/eyeglasses.php";
+                    break;
+                case 'glasses':
+                    include "views/client/product/glasses.php";
+                    break;
+                case 'sunglasses':
+                    include "views/client/product/sunglasses.php";
+                    break;
+                case 'lens':
+                    include "views/client/product/lens.php";
+                    break;
             endswitch;
         else :
             $prod = $this->cm->fillProd();
