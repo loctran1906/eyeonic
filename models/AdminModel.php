@@ -69,7 +69,7 @@ class AdminModel
         endif;
     }
     // END action for brand
-//=============================================================================================================//
+    //=============================================================================================================//
     // action for category
     function addCate()
     {
@@ -124,5 +124,64 @@ class AdminModel
         endif;
     }
     // END action for category
+    //=============================================================================================================//
+    // action for glasses
+    function getBrand(){
+        return $this->connect->query("select * from brand");
+    }
+    function getCate(){
+        return $this->connect->query("select * from category");
+    }
+    function addGlasses()
+    {
+        date_default_timezone_set('Asia/Saigon');
+        $date = date('Y-m-d H:i:s');
+        return $this->connect->query("insert glasses(name, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "', '" . $_POST['description'] . "','" . $_POST['description'] . "', '" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . $_POST['detail'] . "', '$date', '$_SESSION[admin]')");
+    }
+    function getAllGlasses()
+    {
+        return $this->connect->query("select * from glasses");
+    }
+    // function getCateId()
+    // {
+    //     $result  = $this->connect->query("select * from category where id = " . $_GET['id']);
+    //     return mysqli_fetch_array($result);
+    // }
+    // function checkNameCate()
+    // {
+    //     $result  = $this->connect->query("select * from category where name ='" . $_POST['name'] . "'");
+    //     if (mysqli_num_rows($result) != 0) :
+    //         return true;
+    //     else :
+    //         return false;
+    //     endif;
+    // }
 
+    // function checkSameNameCate()
+    // {
+    //     $result  = $this->connect->query("select * from category where name ='" . $_POST['name'] . "' and id != " . $_GET['id']);
+    //     if (mysqli_num_rows($result) != 0) :
+    //         return true;
+    //     else :
+    //         return false;
+    //     endif;
+    // }
+    // function updateCate()
+    // {
+    //     date_default_timezone_set('Asia/Saigon');
+    //     $date = date('Y-m-d H:i:s');
+    //     $name = $_POST['name'];
+    //     $status = $_POST['status'];
+
+    //     return $this->connect->query("update category set name='$name',  status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
+    // }
+    // function deleteCate()
+    // {
+    //     $result  = $this->connect->query("select * from category where cateId = " . $_GET['id']);
+    //     if (mysqli_num_rows($result) != 0) :
+    //         $this->connect->query("update category set status=0 where id = " . $_GET['id']);
+    //     else :
+    //         $this->connect->query("delete from category where id = " . $_GET['id']);
+    //     endif;
+    // }
 }

@@ -48,6 +48,7 @@ class AdminController
                     $bra = $this->am->getAllBrand();
                     include "../views/admin/brand/brand.php";
                     break;
+                    //===============================================================================================================
                     //case for category
                 case 'addcate':
                     if (isset($_POST['name'])) :
@@ -62,9 +63,45 @@ class AdminController
                         include "../views/admin/category/add.php";
                     endif;
                     break;
-                case 'list':
+                case 'cate':
                     $cate = $this->am->getAllCate();
                     include "../views/admin/category/list.php";
+                    break;
+                case 'updatecate':
+                    $id = $this->am->getCateId();
+                    if (isset($_POST['name'])) :
+                        if ($this->am->checkSameNameCate() == true) :
+                            $alert = '<div class="alert alert-danger">This category has existed!</div>';
+                            include "../views/admin/category/update.php";
+                        else :
+                            $this->am->updateCate();
+                            header("location: ?request=cate");
+                        endif;
+                    else :
+                        include "../views/admin/category/update.php";
+                    endif;
+                    break;
+                case 'deletecate':
+                    $this->am->deleteCate();
+                    header("location: ?request=cate");
+                    break;
+                    //===============================================================================================================
+                    //case for glasses
+                case 'addglasses':
+                    if (isset($_POST['name'])) :
+                        
+                            $this->am->addGlasses();
+                            header("location: ?request=glasses");
+                    else :
+                        $brand = $this->am->getBrand();
+                        $cate = $this->am->getCate();
+                        include "../views/admin/glasses/add.php";
+                    endif;
+                    break;
+                case 'glasses':
+                    $bra = $this->am->getAllBrand();
+                    $cate = $this->am->getAllGlasses();
+                    include "../views/admin/glasses/list.php";
                     break;
                 case 'updatecate':
                     $id = $this->am->getCateId();
@@ -84,6 +121,8 @@ class AdminController
                     $this->am->deleteCate();
                     header("location: ?request=list");
                     break;
+                    //===============================================================================================================
+
                     //case for logout
                 case 'signout':
                     unset($_SESSION['admin']);

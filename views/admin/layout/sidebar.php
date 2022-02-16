@@ -69,7 +69,6 @@
         }
     }
 </style>
-
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="row" style="display: flex; justify-content: space-between; width:100%">
         <div class="col-sm-6">
@@ -114,22 +113,10 @@
                 <a class="nav-link" href="?request=brand">Brands</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?request=list">Category</a>
+                <a class="nav-link" href="?request=cate">Category</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems4" aria-controls="collapseSubItems4" aria-expanded="false">Glasses</a>
-                <ul class="nav-second-level collapse" id="collapseSubItems4" data-parent="#navAccordion">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="nav-link-text">Add new</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="nav-link-text">List of glasses</span>
-                        </a>
-                    </li>
-                </ul>
+                <a class="nav-link" href="?request=glasses">Glasses</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">List of customer</a>
