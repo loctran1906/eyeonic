@@ -1,4 +1,4 @@
-<h3>Brand list</h3>
+<h3>Category list</h3>
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -10,13 +10,13 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($bra as $item) : ?>
+        <?php foreach ($cate as $item) : ?>
             <tr>
                 <th scope="row"><?= $item['id'] ?></th>
                 <td><?= $item['name'] ?></td>
                 <td><?= $item['status'] == 1 ? 'Active' : 'Deactive' ?></td>
-                <td><a href="?request=updatebrand&id=<?= $item['id'] ?>">Edit</a></td>
-                <td><a href="?request=deletebrand&id=<?= $item['id'] ?>" onclick="return confirm('Bạn chắc chắn xóa')">Xóa</a></td>
+                <td><a href="?request=updatecate&id=<?= $item['id'] ?>">Edit</a></td>
+                <td><a href="?request=deletecate&id=<?= $item['id'] ?>" onclick="return confirm('Bạn chắc chắn xóa')">Xóa</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

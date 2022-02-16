@@ -1,8 +1,8 @@
-<h3>Add new brand</h3>
+<h3>Add new category</h3>
 <?=$alert??''?>
 <form method="post">
     <div class="form-group">
-        <label for="brandname">Brand name</label>
+        <label for="brandname">Category name</label>
         <input type="text" class="form-control" id="brandname" name="name">
     </div>
     <div class="form-group">
