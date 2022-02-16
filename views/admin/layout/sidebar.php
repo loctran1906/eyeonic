@@ -93,7 +93,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="?request=signout" class="btn btn-default btn-flat">Đăng xuất</a><?php //$ac->routes(); ?>
+                                    <a href="?request=signout" class="btn btn-default btn-flat">Đăng xuất <?php $ac->routes(); ?></a>
                                 </div>
                             </li>
                         </ul>
@@ -111,34 +111,10 @@
                 <a class="nav-link" href="#">Homepage config</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false">Brand</a>
-                <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
-                    <li class="nav-item">
-                        <a class="nav-link" href="?request=addbrand">
-                            <span class="nav-link-text">Add new</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?request=brand">
-                            <span class="nav-link-text">List of brand</span>
-                        </a>
-                    </li>
-                </ul>
+                <a class="nav-link" href="?request=brand">Brands</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems3" aria-expanded="false">Category</a>
-                <ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
-                    <li class="nav-item">
-                        <a class="nav-link" href="?request=addcate">
-                            <span class="nav-link-text">Add new</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?request=list">
-                            <span class="nav-link-text">List of category</span>
-                        </a>
-                    </li>
-                </ul>
+                <a class="nav-link" href="?request=list">Category</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse" data-target="#collapseSubItems4" aria-controls="collapseSubItems4" aria-expanded="false">Glasses</a>

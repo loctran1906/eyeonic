@@ -1,4 +1,5 @@
 <h3>Brand list</h3>
+<div class="form-group"><a href="?request=addbrand" class="btn btn-success"> Add brand</a></div>
 <table class="table">
     <thead class="thead-dark">
         <tr>

@@ -1,4 +1,5 @@
 <h3>Category list</h3>
+<div class="form-group"><a href="?request=addcate" class="btn btn-success"> Add category</a></div>
 <table class="table">
     <thead class="thead-dark">
         <tr>

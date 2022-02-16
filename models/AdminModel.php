@@ -73,7 +73,9 @@ class AdminModel
     // action for category
     function addCate()
     {
-        return $this->connect->query("insert category(name,status) values ('" . $_POST['name'] . "', '" . $_POST['status'] . "')");
+        date_default_timezone_set('Asia/Saigon');
+        $date = date('Y-m-d H:i:s');
+        return $this->connect->query("insert category(name,status,created_at) values ('" . $_POST['name'] . "', '" . $_POST['status'] . "','$date')");
     }
     function getAllCate()
     {
@@ -105,10 +107,12 @@ class AdminModel
     }
     function updateCate()
     {
+        date_default_timezone_set('Asia/Saigon');
+        $date = date('Y-m-d H:i:s');
         $name = $_POST['name'];
         $status = $_POST['status'];
 
-        return $this->connect->query("update category set name='$name',  status='$status' where id = " . $_GET['id']);
+        return $this->connect->query("update category set name='$name',  status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
     }
     function deleteCate()
     {
