@@ -10,12 +10,15 @@
                 </ul>
             </div>
             <div class="col-sm-4">
-                <h3>Đề tài</h3>
-                <p>Đề tài kính mắt</p>
+                <h3>Topic</h3>
+                <p>Glasses</p>
             </div>
             <div class="col-sm-4">
-                <h3>Hỗ trợ</h3>
-                <p>Thầy Lục Vân Tiêns</p>
+                <h3>Instructors</h3>
+                <ul>
+                    <li>Teacher. Lục Vân Tiêns</li>
+                    <li>Teacher. Lục Vân Tiêns</li>
+                </ul>
             </div>
         </div>
     </div>
