@@ -87,39 +87,49 @@ class AdminController
                     break;
                     //===============================================================================================================
                     //case for glasses
+                    //add new
                 case 'addglasses':
                     if (isset($_POST['submit'])) :
-                        $this->am->addGlasses();
-                        header("location: ?request=glasses");
+                        if ($this->am->checkNameGlassesAdd() == true) :
+                            $alert = '<div class="alert alert-danger">There are similar products!</div>';
+                            include "../views/admin/glasses/add.php";
+                        else :
+                            $this->am->addGlasses();
+                            header("location: ?request=glasses");
+                        endif;
                     else :
                         $brand = $this->am->getBrand();
                         $cate = $this->am->getCate();
                         include "../views/admin/glasses/add.php";
                     endif;
                     break;
+                    //view list
                 case 'glasses':
                     $bra = $this->am->getAllBrand();
                     $cate = $this->am->getAllGlasses();
                     $glasses = $this->am->getAllGlasses();
                     include "../views/admin/glasses/list.php";
                     break;
-                case 'updatecate':
-                    $id = $this->am->getCateId();
-                    if (isset($_POST['name'])) :
-                        if ($this->am->checkSameNameCate() == true) :
-                            $alert = '<div class="alert alert-danger">This category has existed!</div>';
-                            include "../views/admin/category/update.php";
+                    //update
+                case 'updateglasses':
+                    $id = $this->am->getGlassesId();
+                    if (isset($_POST['submit'])) :
+                        if ($this->am->checkSameNameGlasses() == true) :
+                            $alert = '<div class="alert alert-danger">There are similar products!</div>';
+                            include "../views/admin/glasses/update.php";
                         else :
-                            $this->am->updateCate();
-                            header("location: ?request=list");
+                            $this->am->updateGlasses();
+                            header("location: ?request=glasses");
                         endif;
                     else :
-                        include "../views/admin/category/update.php";
+                        $brand = $this->am->getBrand();
+                        $cate = $this->am->getCate();
+                        include "../views/admin/glasses/update.php";
                     endif;
                     break;
-                case 'deletecate':
-                    $this->am->deleteCate();
-                    header("location: ?request=list");
+                case 'deleteglasses':
+                    $this->am->deleteGlasses();
+                    header("location: ?request=glasses");
                     break;
                     //===============================================================================================================
 

@@ -136,58 +136,68 @@ class AdminModel
     }
     function addGlasses()
     {
-        $image = basename($_FILES['image']['name']);
+        $image = basename('upload_'.$_FILES['image']['name']);
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
         $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
         date_default_timezone_set('Asia/Saigon');
         $date = date('Y-m-d H:i:s');
-        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "','$image', '" . $_POST['description'] . "','" . $_POST['description'] . "', '" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . $_POST['detail'] . "', '$date', '$_SESSION[admin]')");
+        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "','$image', '" . $_POST['description'] . "', '" . $_POST['price'] . "','" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . $_POST['detail'] . "', '$date', '$_SESSION[admin]')");
     }
     function getAllGlasses()
     {
         return $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id);");
     }
-    // function getCateId()
-    // {
-    //     $result  = $this->connect->query("select * from category where id = " . $_GET['id']);
-    //     return mysqli_fetch_array($result);
-    // }
-    // function checkNameCate()
-    // {
-    //     $result  = $this->connect->query("select * from category where name ='" . $_POST['name'] . "'");
-    //     if (mysqli_num_rows($result) != 0) :
-    //         return true;
-    //     else :
-    //         return false;
-    //     endif;
-    // }
+    function getGlassesId()
+    {
+        $result  = $this->connect->query("select * from glasses where id = " . $_GET['id']);
+        return mysqli_fetch_array($result);
+    }
+    function checkNameGlassesAdd()
+    {
+        $result  = $this->connect->query("select * from glasses where name ='" . $_POST['name'] . "'");
+        if (mysqli_num_rows($result) != 0) :
+            return true;
+        else :
+            return false;
+        endif;
+    }
 
-    // function checkSameNameCate()
-    // {
-    //     $result  = $this->connect->query("select * from category where name ='" . $_POST['name'] . "' and id != " . $_GET['id']);
-    //     if (mysqli_num_rows($result) != 0) :
-    //         return true;
-    //     else :
-    //         return false;
-    //     endif;
-    // }
-    // function updateCate()
-    // {
-    //     date_default_timezone_set('Asia/Saigon');
-    //     $date = date('Y-m-d H:i:s');
-    //     $name = $_POST['name'];
-    //     $status = $_POST['status'];
+    function checkSameNameGlasses()
+    {
+        $result  = $this->connect->query("select * from glasses where name ='" . $_POST['name'] . "' and id != " . $_GET['id']);
+        if (mysqli_num_rows($result) != 0) :
+            return true;
+        else :
+            return false;
+        endif;
+    }
+    function updateGlasses()
+    {
+        $image = basename('update_'.$_FILES['image']['name']);
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
+        $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-    //     return $this->connect->query("update category set name='$name',  status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
-    // }
-    // function deleteCate()
-    // {
-    //     $result  = $this->connect->query("select * from category where cateId = " . $_GET['id']);
-    //     if (mysqli_num_rows($result) != 0) :
-    //         $this->connect->query("update category set status=0 where id = " . $_GET['id']);
-    //     else :
-    //         $this->connect->query("delete from category where id = " . $_GET['id']);
-    //     endif;
-    // }
+        date_default_timezone_set('Asia/Saigon');
+        $date = date('Y-m-d H:i:s');
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
+        $brand_id = $_POST['brand'];
+        $cate_id = $_POST['cate'];
+        $detail = $_POST['detail'];
+        $status = $_POST['status'];
+
+        return $this->connect->query("update glasses set name='$name', image = '$image', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
+    }
+    function deleteGlasses()
+    {
+        $result  = $this->connect->query("select * from glasses where cateId = " . $_GET['id']);
+        if (mysqli_num_rows($result) != 0) :
+            $this->connect->query("update glasses set status=0 where id = " . $_GET['id']);
+        else :
+            $this->connect->query("delete from glasses where id = " . $_GET['id']);
+        endif;
+    }
 }

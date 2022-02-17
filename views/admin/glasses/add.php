@@ -1,5 +1,6 @@
 
 <h3>Add new glasses</h3>
+<?=$alert??''?>
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="glassesname">Glasses name</label>

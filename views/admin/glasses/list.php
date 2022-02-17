@@ -27,7 +27,7 @@
                 <td><?=$item['updated_by']?></td>
                 <td><?= $item['status'] == 1 ? 'Active' : 'Deactive' ?></td>
                 <td><a href="?request=updateglasses&id=<?= $item['id'] ?>">Edit</a></td>
-                <td><a href="?request=deleteglasses&id=<?= $item['id'] ?>" onclick="return confirm('Bạn chắc chắn xóa')">Xóa</a></td>
+                <td><a href="?request=deleteglasses&id=<?= $item['id'] ?>" onclick="return confirm('Are you sure to delete this glasses?')">Xóa</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
