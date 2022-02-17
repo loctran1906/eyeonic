@@ -126,21 +126,27 @@ class AdminModel
     // END action for category
     //=============================================================================================================//
     // action for glasses
-    function getBrand(){
+    function getBrand()
+    {
         return $this->connect->query("select * from brand");
     }
-    function getCate(){
+    function getCate()
+    {
         return $this->connect->query("select * from category");
     }
     function addGlasses()
     {
+        $image = basename($_FILES['image']['name']);
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
+        $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
         date_default_timezone_set('Asia/Saigon');
         $date = date('Y-m-d H:i:s');
-        return $this->connect->query("insert glasses(name, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "', '" . $_POST['description'] . "','" . $_POST['description'] . "', '" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . $_POST['detail'] . "', '$date', '$_SESSION[admin]')");
+        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "','$image', '" . $_POST['description'] . "','" . $_POST['description'] . "', '" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . $_POST['detail'] . "', '$date', '$_SESSION[admin]')");
     }
     function getAllGlasses()
     {
-        return $this->connect->query("select * from glasses");
+        return $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id);");
     }
     // function getCateId()
     // {

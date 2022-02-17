@@ -88,10 +88,9 @@ class AdminController
                     //===============================================================================================================
                     //case for glasses
                 case 'addglasses':
-                    if (isset($_POST['name'])) :
-                        
-                            $this->am->addGlasses();
-                            header("location: ?request=glasses");
+                    if (isset($_POST['submit'])) :
+                        $this->am->addGlasses();
+                        header("location: ?request=glasses");
                     else :
                         $brand = $this->am->getBrand();
                         $cate = $this->am->getCate();
@@ -101,6 +100,7 @@ class AdminController
                 case 'glasses':
                     $bra = $this->am->getAllBrand();
                     $cate = $this->am->getAllGlasses();
+                    $glasses = $this->am->getAllGlasses();
                     include "../views/admin/glasses/list.php";
                     break;
                 case 'updatecate':
