@@ -13,10 +13,7 @@ class AdminController
         if (isset($_GET['request'])) :
             switch ($_GET['request']): //tiếp nhận lại biến get trên thanh địa chỉ'
                     //case for brand
-                case 'deletebrand':
-                    $this->am->deleteBrand();
-                    header("location: ?request=brand");
-                    break;
+                    //add
                 case 'addbrand':
                     if (isset($_POST['name'])) :
                         if ($this->am->checkNameBrand() == true) :
@@ -30,6 +27,12 @@ class AdminController
                         include "../views/admin/brand/addbrand.php";
                     endif;
                     break;
+                    //view
+                case 'brand':
+                    $bra = $this->am->getAllBrand();
+                    include "../views/admin/brand/brand.php";
+                    break;
+                    //update
                 case 'updatebrand':
                     $id = $this->am->getBrandId();
                     if (isset($_POST['name'])) :
@@ -44,12 +47,15 @@ class AdminController
                         include "../views/admin/brand/updatebrand.php";
                     endif;
                     break;
-                case 'brand':
-                    $bra = $this->am->getAllBrand();
-                    include "../views/admin/brand/brand.php";
+                    //delete
+                case 'deletebrand':
+                    $this->am->deleteBrand();
+                    header("location: ?request=brand");
                     break;
+
                     //===============================================================================================================
                     //case for category
+                    //add
                 case 'addcate':
                     if (isset($_POST['name'])) :
                         if ($this->am->checkNameCate() == true) :
@@ -63,10 +69,12 @@ class AdminController
                         include "../views/admin/category/add.php";
                     endif;
                     break;
+                    //view
                 case 'cate':
                     $cate = $this->am->getAllCate();
                     include "../views/admin/category/list.php";
                     break;
+                    //update
                 case 'updatecate':
                     $id = $this->am->getCateId();
                     if (isset($_POST['name'])) :
@@ -81,6 +89,7 @@ class AdminController
                         include "../views/admin/category/update.php";
                     endif;
                     break;
+                    //delete
                 case 'deletecate':
                     $this->am->deleteCate();
                     header("location: ?request=cate");
@@ -127,16 +136,28 @@ class AdminController
                         include "../views/admin/glasses/update.php";
                     endif;
                     break;
+                    //delete
                 case 'deleteglasses':
                     $this->am->deleteGlasses();
                     header("location: ?request=glasses");
                     break;
                     //===============================================================================================================
-
-                    //case for logout
+                    //case for login - logout
                 case 'signout':
                     unset($_SESSION['admin']);
                     header("location: .");
+                    break;
+                case 'home':
+                    include "../views/admin/home/home.php";
+                    break;
+                    //case list of customer
+                case 'listcustomer':
+                    $customer = $this->am->getCustomer();
+                    include "../views/admin/customer/customer.php";
+                    break;
+                case 'deletecustomer':
+                    $this->am->deleteCustomer();
+                    header("location: ?request=listcustomer");
                     break;
             endswitch;
         endif;
@@ -145,11 +166,11 @@ class AdminController
     {
         if (isset($_POST['user'])) :
             if ($this->am->checkSignIn() == false) :
-                $alert = 'Lỗi đăng nhập';
+                $alert = '<div class="alert alert-danger">Username or password is not correct!</div>';
                 include "../views/admin/signin.php";
             else :
                 $_SESSION['admin'] = $_POST['user'];
-                header("location: .");
+                header("location: ?request=home");
             endif;
         else :
             if (empty($_SESSION['admin'])) :

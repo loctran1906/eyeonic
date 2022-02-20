@@ -183,18 +183,18 @@ class AdminModel
         $cate_id = $_POST['cate'];
         $detail = $_POST['detail'];
         $status = $_POST['status'];
+        $image = basename('update_' . $_FILES['image']['name']);
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
+        $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-        if (!isset($_POST['image'])) :
-            $image = basename('update_' . $_FILES['image']['name']);
-            $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
-            $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
-            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+        if ($_FILES['image']['size'] !== 0) :
+
+            $a = $this->connect->query("update glasses set name='$name', image = '$image', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
         else :
-            $result = $this->connect->query("select * from glasses where id = " . $_GET['id']);
-            $getImg = mysqli_fetch_array($result);
-            $image = $getImg['image'];
+            $a = $this->connect->query("update glasses set name='$name', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
         endif;
-        return $this->connect->query("update glasses set name='$name', image = '$image', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
+        return $a;
     }
     function deleteGlasses()
     {
@@ -204,5 +204,20 @@ class AdminModel
         else :
             $this->connect->query("delete from glasses where id = " . $_GET['id']);
         endif;
+    }
+    //=============================================================================================================//
+    // action for customer
+    function getCustomer()
+    {
+        return $this->connect->query("SELECT * FROM users");
+    }
+    function getCustomerId()
+    {
+        $result  = $this->connect->query("select * from users where id = " . $_GET['id']);
+        return mysqli_fetch_array($result);
+    }
+    function deleteCustomer()
+    {
+        $this->connect->query("delete from users where id = " . $_GET['id']);
     }
 }

@@ -1,6 +1,5 @@
-
 <h3>Add new glasses</h3>
-<?=$alert??''?>
+<?= $alert ?? '' ?>
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="glassesname">Glasses name</label>
@@ -8,11 +7,12 @@
     </div>
     <div class="form-group">
         <label for="imagename">Select Image File to Upload:</label>
-        <input type="file" class="form-control" id="imagename" name="image">
+        <input type="file" class="form-control" id="imagename" name="image" accept="image/*">
+
     </div>
     <div class="form-group">
         <label for="description">Description</label>
-        <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+        <textarea class="form-control" id="description123" rows="3" name="description"></textarea>
     </div>
     <div class="form-group">
         <label for="priceglasses">Price</label>
@@ -38,7 +38,7 @@
     </div>
     <div class="form-group">
         <label for="detail">Detail</label>
-        <textarea class="form-control" id="detail" rows="3" name="detail"></textarea>
+        <textarea class="form-control" id="detail12345547" rows="3" name="detail"></textarea>
     </div>
     <button type="submit" class="btn btn-primary" name="submit">Add</button>
     <button type="reset" class="btn btn-secondary">Reset</button>

@@ -77,37 +77,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-        <div class="col-sm-6" style="display: flex; justify-content: flex-end; align-items: center">
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <!-- <div class="btn btn-success"><a href="">Compare</a></div> -->
-                            <i class="fa fa-user"></i>
-                            <span class="hidden-xs showUserName">Hi: <?= $_SESSION['admin'] ?></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="?request=signout" class="btn btn-default btn-flat">Đăng xuất <?php $ac->routes(); ?></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="?request=home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Homepage config</a>
+                <a class="nav-link" href="?request=aboutus">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?request=homepageconfig">Homepage config</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?request=brand">Brands</a>
@@ -119,7 +99,7 @@
                 <a class="nav-link" href="?request=glasses">Glasses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">List of customer</a>
+                <a class="nav-link" href="?request=listcustomer">List of customer</a>
             </li>
         </ul>
     </div>

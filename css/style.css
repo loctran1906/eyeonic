@@ -311,12 +311,14 @@ img {
 
 /* contact */
 .contact {
-  padding: 150px 0 50px 0;
+  padding: 0;
   background-size: cover;
   height: auto;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
 }
+.contact-form{position: relative; top: -150px;}
 .contact-content {
   position: relative;
   z-index: 1;
@@ -327,8 +329,9 @@ img {
   box-shadow: 5px 5px 10px;
   background: #fff;
 }
+.contact-desc{padding-top: 75px;padding-left: 30px;}
 .location {
-  padding: 50px 0;
+  padding: 0;
 }
 .location ul.flex-center li {
   padding: 40px;

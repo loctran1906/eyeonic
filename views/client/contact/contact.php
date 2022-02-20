@@ -14,55 +14,58 @@
 <div class="contact ">
     <div class="container flex-center contact-content">
         <div class="row">
-            <div class="col-sm-6">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                        </div>
+            <div class="col-sm-6 contact-form">
+                <form method="post">
+                    <div class="form-group">
+                        <h3>Your message</h3>
+                        <i>(Information marked with <span style="color: red; font-weight: bold">*</span> is required)</i>
+                        <?=$alert??''?>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFullname">Fullname<sup><span style="color: red; font-weight: bold">*</span></sup></label>
+                        <input type="text" class="form-control" id="inputFullname" placeholder="" name="fullname" require>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="" name="address">
                     </div>
                     <div class="form-group">
-                        <label for="phonenumber">Your phone</label>
-                        <input type="number" class="form-control" id="phonenumber" placeholder="">
+                        <label for="phonenumber">Your phone<sup><span style="color: red; font-weight: bold">*</span></sup></label>
+                        <input type="number" class="form-control" id="phonenumber" placeholder="" name="phone" require>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <label for="fullname">Full name</label>
-                            <input type="text" class="form-control" id="fullname">
+                            <label for="mail">Email<sup><span style="color: red; font-weight: bold">*</span></sup></label>
+                            <input type="text" class="form-control" id="mail" name="email" require>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="age">Ages</label>
-                            <input type="number" class="form-control" id="age">
+                            <input type="number" class="form-control" id="age" name="age">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputState">Gender</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>---Choose---</option>
-                                <option>Female</option>
-                                <option>Male</option>
-                                <option>Other...</option>
+                            <select id="inputState" class="form-control" name="gender">
+                                <option selected value="none">---Choose---</option>
+                                <option value="ms">Female</option>
+                                <option value="mr">Male</option>
+                                <option value="other">Other...</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message content</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content"></textarea>
+                    </div>
+                    <div class="form-group">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" type="radio" id="gridCheck" name="member" value="1">
                             <label class="form-check-label" for="gridCheck">Would you like to become our member?</label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send your message</button>
+                    <button type="submit" class="btn btn-primary" name="submit">Send your message</button>
                 </form>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 contact-desc">
                 <div>
                     <h2>We'd love to hear your feedback</h2>
                 </div>
@@ -97,8 +100,9 @@
                         <div><i class="fa fa-phone"></i></div>
                         <label for="phone">Hotline: </label>
                         <Address id="phone"><a href="tel:855-393-2664">1-855-EYEONIC (855-393-2664)</a>
-                           <br> Mon.- Sat. 7 a.m.- 5 p.m. <br>PST
-                            Sun. Closed</Address>
+                            <br> Mon.- Sat. 7 a.m.- 5 p.m. <br>PST
+                            Sun. Closed
+                        </Address>
                     </li>
                 </ul>
             </div>

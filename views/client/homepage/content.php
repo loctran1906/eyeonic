@@ -10,7 +10,7 @@
         <div class="row flex-center">
             <ul class="nav nav-tabs " id="myTab">
                 <li class="nav-item active">
-                    <a class="nav-link active" data-toggle="tab" href="#all">All</a>
+                    <a class="nav-link active" data-toggle="tab" href="?request=all">All</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#eyeglasses">Eyeglasses</a>
@@ -33,7 +33,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-
                         <div class="sort-by">
                             <div class="title">Sort by</div>
                             <div>
