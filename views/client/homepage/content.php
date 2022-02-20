@@ -13,16 +13,16 @@
                     <a class="nav-link active" data-toggle="tab" href="?request=all">All</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#eyeglasses">Eyeglasses</a>
+                    <a class="nav-link" data-toggle="tab" href="?request=eyeglasses">Eyeglasses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#sunglasses">Sunglasses</a>
+                    <a class="nav-link" data-toggle="tab" href="?request=sunglasses">Sunglasses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#lens">Lens</a>
+                    <a class="nav-link" data-toggle="tab" href="?request=lens">Lens</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#glasses">Glasses</a>
+                    <a class="nav-link" data-toggle="tab" href="?request=glasses">Glasses</a>
                 </li>
             </ul>
         </div>
@@ -38,16 +38,16 @@
                             <div>
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Ray-Ban</a>
+                                        <a class="nav-link" href="?request=rayban">Ray-Ban</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Ruby</a>
+                                        <a class="nav-link" href="?request=ruby">Ruby</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Gucci</a>
+                                        <a class="nav-link" href="?request=gucci">Gucci</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Dragon</a>
+                                        <a class="nav-link" href="?request=dragon">Dragon</a>
                                     </li>
                                 </ul>
                             </div>

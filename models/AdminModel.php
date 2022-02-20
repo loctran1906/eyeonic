@@ -189,7 +189,6 @@ class AdminModel
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
         if ($_FILES['image']['size'] !== 0) :
-
             $a = $this->connect->query("update glasses set name='$name', image = '$image', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
         else :
             $a = $this->connect->query("update glasses set name='$name', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
