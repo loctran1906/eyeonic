@@ -142,11 +142,11 @@ class AdminModel
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
         date_default_timezone_set('Asia/Saigon');
         $date = date('Y-m-d H:i:s');
-        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "','$image', '" . $_POST['description'] . "', '" . $_POST['price'] . "','" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . $_POST['detail'] . "', '$date', '$_SESSION[admin]')");
+        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "','$image', '" . addslashes($_POST['description']) . "', '" . $_POST['price'] . "','" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . addslashes($_POST['description']) . "', '$date', '$_SESSION[admin]')");
     }
     function getAllGlasses()
     {
-        return $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id);");
+        return $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) order by id DESC;");
     }
     function getGlassesId()
     {
@@ -183,12 +183,11 @@ class AdminModel
         $cate_id = $_POST['cate'];
         $detail = $_POST['detail'];
         $status = $_POST['status'];
-        $image = basename('update_' . $_FILES['image']['name']);
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
-        $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
-        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-
         if ($_FILES['image']['size'] !== 0) :
+            $image = basename('update_' . $_FILES['image']['name']);
+            $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/eyeonic/img/upload/'; //file lưu ảnh
+            $target_file = $target_dir . $image; //lưu tên ảnh vào trong file để lưu
+            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
             $a = $this->connect->query("update glasses set name='$name', image = '$image', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);
         else :
             $a = $this->connect->query("update glasses set name='$name', description = '$description', price = '$price',brand_id = '$brand_id' ,  cate_id = '$cate_id', detail = '$detail', status='$status', updated_at = '$date', updated_by = '$_SESSION[admin]' where id = " . $_GET['id']);

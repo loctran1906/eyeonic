@@ -20,7 +20,7 @@
                 <th scope="row"><?= $person['id'] ?></th>
                 <td><?= $person['fullname'] ?></td>
                 <td><?= $person['address'] ?></td>
-                <td>(+84)/0<?= $person['phone'] ?></td>
+                <td>(+84)/<?= $person['phone'] ?></td>
                 <td><?= $person['email'] ?></td>
                 <td><?= $person['age'] ?></td>
                 <td><?= $person['gender'] ?></td>

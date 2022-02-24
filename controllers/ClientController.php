@@ -19,22 +19,10 @@ class ClientController
         if (isset($_GET['request'])) :
             switch ($_GET['request']): //tiếp nhận lại biến get trên thanh địa chỉ
                 case 'home':
-                    $prod = $this->cm->fillProd();
-
+                    $glasses = $this->cm->showGlasses();
+                    $a = $this->cm->getProd();
+                    $b = $this->cm->getBrand();
                     include "views/home.php"; //lấy nội dung tương ứng để hiển thị
-                    break;
-                case 'news':
-                    include "views/news.php";
-                    break;
-                case 'feedback':
-                    include "views/feedback.php";
-                    break;
-                case 'cart':
-                    include "views/cart.php";
-                    break;
-                case 'filterProd':
-                    $prd = $this->cm->fillProd();
-                    include "views/prd.php";
                     break;
                 case 'contact':
                     if (isset($_POST['submit'])) :
@@ -65,8 +53,46 @@ class ClientController
                     break;
             endswitch;
         else :
-            $prod = $this->cm->fillProd();
+            $glasses = $this->cm->showGlasses();
+            $a = $this->cm->getProd();
+            $b = $this->cm->getBrand();
             include 'views/home.php';
+        endif;
+    }
+    function routes2()
+    {
+        if (isset($_GET['request'])) :
+            if (isset($_GET['cate'])) :
+                switch ($_GET['cate']): //tiếp nhận lại biến get trên thanh địa chỉ
+                    case '0':
+                        $glasses = $this->cm->showGlasses();
+                        include "views/client/product/show-glasses.php"; //lấy nội dung tương ứng để hiển thị
+                        break;
+
+                    case '1':
+                        $glasses = $this->cm->showGlasses();
+                        include "views/client/product/show-glasses.php";
+                        break;
+                    case '2':
+                        $glasses = $this->cm->showGlasses();
+                        include "views/client/product/show-glasses.php";
+                        break;
+                    case '3':
+                        $glasses = $this->cm->showGlasses();
+                        include "views/client/product/show-glasses.php";
+                        break;
+                    case '4':
+                        $glasses = $this->cm->showGlasses();
+                        include "views/client/product/show-glasses.php";
+                        break;
+                endswitch;
+            else :
+                $glasses = $this->cm->showGlasses();
+                include "views/client/product/show-glasses.php";
+            endif;
+        else :
+            $glasses = $this->cm->showGlasses();
+            include "views/client/product/show-glasses.php";
         endif;
     }
 }

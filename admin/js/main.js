@@ -1,6 +1,6 @@
 $(document).ready(function () {
   tinymce.init({
-    selector: 'textarea#testtiny',
+    selector: 'textarea#description123, textarea#detail',
     height: 500,
     menubar: false,
     plugins: [

@@ -5,6 +5,7 @@ $connect = new MySQLi('localhost', 'root', '', 'eyeonic'); //kết nối lên db
 <?php
 include "controllers/ClientController.php";
 $cc = new ClientController();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,6 @@ $cc = new ClientController();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
     <script src="js/main.js"></script>
 </head>
 
@@ -34,7 +34,7 @@ $cc = new ClientController();
         <?php $cc->routes(); ?>
     </article>
     <?php include "views/client/layout/footer.php"; ?>
-    
+    <script src="https://cdn.tiny.cloud/1/h899ii5kew3kb416gzma5gcrqf6hr5tk507fzfupj6sa6jyr/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>

@@ -1,3 +1,4 @@
+
 <div class="banner">
     <div class="container-fluid">
         <div class="row">
@@ -58,7 +59,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="gridCheck" name="member" value="1">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" name="member" value="1">
                             <label class="form-check-label" for="gridCheck">Would you like to become our member?</label>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
             <div>
                 <h3>You can find us at the location in the map below</h3>
             </div>
-            <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed" alt='fullscreen' style="width: 100%; height:300px; margin :30px 0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.248289743231!2d105.86301031440793!3d21.06274329199434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aa2fe7d91b15%3A0xab68fc7eea5b40a!2zNDEyIE5n4buNYyBUaHXhu7UsIE5n4buNYyBUaOG7pXksIExvbmcgQmnDqm4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1645621481287!5m2!1svi!2s" alt='fullscreen' style="width: 100%; height:300px; margin :30px 0"></iframe>
             <div>
                 <ul class="row flex-center" style="list-style: none;">
                     <li class="col-md-4">

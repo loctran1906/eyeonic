@@ -38,7 +38,7 @@
     </div>
     <div class="form-group">
         <label for="detail">Detail</label>
-        <textarea class="form-control" id="detail12345547" rows="3" name="detail"></textarea>
+        <textarea class="form-control" id="detail" rows="3" name="detail"></textarea>
     </div>
     <button type="submit" class="btn btn-primary" name="submit">Add</button>
     <button type="reset" class="btn btn-secondary">Reset</button>

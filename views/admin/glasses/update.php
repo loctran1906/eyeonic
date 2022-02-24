@@ -7,11 +7,11 @@
     </div>
     <div class="form-group">
         <label for="imagename">Select Image File to Upload:</label>
-        <input type="file" class="form-control" id="imagename" name="image" value="<?=$id['image']?>">
+        <input type="file" class="form-control" id="imagename" name="image">
     </div>
     <div class="form-group">
         <label for="description">Description</label>
-        <textarea class="form-control" id="description" rows="3" name="description"><?=$id['description']?></textarea>
+        <textarea class="form-control" id="description123" rows="3" name="description"><?=$id['description']?></textarea>
     </div>
     <div class="form-group">
         <label for="priceglasses">Price</label>
