@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputFullname">Fullname<sup><span style="color: red; font-weight: bold">*</span></sup></label>
-                        <input type="text" class="form-control" id="inputFullname" placeholder="" name="fullname" require>
+                        <input type="text" class="form-control" id="inputFullname" placeholder="" name="fullname" required>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
@@ -32,12 +32,12 @@
                     </div>
                     <div class="form-group">
                         <label for="phonenumber">Your phone<sup><span style="color: red; font-weight: bold">*</span></sup></label>
-                        <input type="number" class="form-control" id="phonenumber" placeholder="" name="phone" require>
+                        <input type="number" class="form-control" id="phonenumber" placeholder="" name="phone" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label for="mail">Email<sup><span style="color: red; font-weight: bold">*</span></sup></label>
-                            <input type="text" class="form-control" id="mail" name="email" require>
+                            <input type="text" class="form-control" id="mail" name="email" required>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="age">Ages</label>

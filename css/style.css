@@ -27,7 +27,7 @@ label {
   margin: 0;
 }
 a:hover {
-  color: blue;
+  color: blue; text-decoration: none;
 }
 .header,
 .footer {
@@ -251,54 +251,23 @@ img {
   margin-bottom: 50px;
   margin-top: 50px;
 }
+.content .glasses-cate{ width: 100%; justify-content: space-around; margin-bottom: 30px; border: solid 2px #0c3934;; background-color: rgb(185, 208, 141);}
+.content .glasses-cate li{ padding: 10px 84px; position: relative;}
+
+.content .glasses-cate li:hover{ background: #0c3934; transition: all 0.3s;}
+.content .glasses-cate li:hover a{ color: #fff;}
 .content .title {
   justify-content: center;
   flex-wrap: wrap;
 }
 .content .title .descriprion,
-.content .title .navbar {
-  width: 100%;
-  justify-content: center;
-}
-.content .title .navbar1 ul {
-  justify-content: center;
-}
-.content .title .navbar1 form {
-  position: relative;
-}
-.content .title .navbar1 form input {
-  padding: 5px 15px;
-}
-.content .title .navbar1 ul li.item {
-  padding: 20px;
-  list-style: none;
-  text-decoration: none;
-  position: relative;
-}
-.content .title .navbar1 ul li.item::after {
-  content: '';
-  display: block;
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  right: 0;
-  width: 2px;
-  height: 40px;
-  top: 14px;
-}
-.content .title .navbar1 ul li:last-child::after {
-  content: '';
-  display: block;
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  right: 0;
-  width: 0;
-  height: 40px;
-  top: 14px;
-}
+
 .content .item-product {
   padding: 30px;
   margin: 15px 0;
-  border: green thin solid;
+  border: rgba(168, 206, 0, 0.761) thin solid;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .content .item-product .price {
   justify-content: space-between;
