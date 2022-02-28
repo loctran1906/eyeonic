@@ -12,7 +12,6 @@ class ClientController
     {
         $this->cm = new ClientModel();
         $this->brands = $this->cm->getBrand();
-        $this->prices = $this->cm->getPrices();
     }
     function routes()
     {
@@ -50,6 +49,12 @@ class ClientController
                     break;
                 case 'lens':
                     include "views/client/product/lens.php";
+                    break;
+                case 'detail':
+                    if (isset($_GET['id'])) :
+                        $glasses = $this->cm->showDetailGlasses();
+                        include "views/client/product/detail.php";
+                    endif;
                     break;
             endswitch;
         else :
@@ -93,6 +98,16 @@ class ClientController
         else :
             $glasses = $this->cm->showGlasses();
             include "views/client/product/show-glasses.php";
+        endif;
+    }
+    function routes3()
+    {
+        if (isset($_GET['request'])) :
+            $glasses = $this->cm->showNewGlasses();
+            include "views/client/product/new-glasses.php";
+        else :
+            $glasses = $this->cm->showNewGlasses();
+            include "views/client/product/new-glasses.php";
         endif;
     }
 }

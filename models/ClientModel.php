@@ -52,15 +52,20 @@ class ClientModel
             } else {
                 $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 ;");
             }
+        } elseif (isset($_GET['key'])) {
+            $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.name like '%" . $_GET['key'] . "%' or brand.name like '%" . $_GET['key'] . "%'");
         } else {
             $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 ;");
         }
 
         return $result;
     }
-    // tìm theo khoảng giá
-    function getPrices()
+    function showNewGlasses()
     {
-        return $this->connect->query("select * from prices where status");
+        return $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 order by id desc LIMIT 5;");
+    }
+    function showDetailGlasses()
+    {
+        return $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 and id = ".$_GET['id']);
     }
 }

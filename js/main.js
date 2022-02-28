@@ -18,7 +18,7 @@ $(document).ready(function () {
     asNavFor: '.slider-for',
     dots: true,
     focusOnSelect: true,
-    centerMode: true
+    centerMode: false
   })
   $('.nav-link-collapse').on('click', function () {
     $('.nav-link-collapse')

@@ -31,7 +31,7 @@ a:hover {
 }
 .header,
 .footer {
-  background: #f9fafc;
+  background: #343a40;
 }
 h1,
 h2,
@@ -73,7 +73,9 @@ img {
   justify-content: flex-start;
 }
 .header .right {
+  display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .header .slogan strong {
   color: rgba(0, 0, 0, 0.2);
@@ -268,7 +270,10 @@ img {
   border: rgba(168, 206, 0, 0.761) thin solid;
   border-radius: 5px;
   overflow: hidden;
+  border-radius: 6px;
+  transition: transform .2s;
 }
+.content .item-product:hover{transform: scale(1.05);}
 .content .item-product .price {
   justify-content: space-between;
 }
