@@ -3,7 +3,9 @@ $(document).ready(function () {
     slidesToShow: 1,
     fade: true,
     dot: false,
-    nav: true
+    nav: true,
+    autoplay: true,
+    autoplaySpeed: 2000
   })
   $('.slider-for').slick({
     slidesToShow: 1,

@@ -54,6 +54,8 @@ class ClientController
                     if (isset($_GET['id'])) :
                         $glasses = $this->cm->showDetailGlasses();
                         include "views/client/product/detail.php";
+                        $more = $this->cm->showMoreGlasses();
+                        include "views/client/product/more-glasses.php";
                     endif;
                     break;
             endswitch;
