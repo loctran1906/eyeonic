@@ -66,6 +66,7 @@ class ClientModel
     }
     function showDetailGlasses()
     {
-        return $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 and id = ".$_GET['id']);
+        $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 and glasses.id = ".$_GET['id']);
+        return mysqli_fetch_array($result);
     }
 }

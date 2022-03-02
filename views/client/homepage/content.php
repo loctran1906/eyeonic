@@ -11,7 +11,7 @@ $cc = new ClientController(); ?>
     </div>
     <div class="container">
         <div class="row flex-center">
-            <ul class="nav nav-tabs flex-center glasses-cate">
+            <ul class="nav-tabs flex-center glasses-cate" style="list-style: none;">
                 <li><a href="?request=home&cate=0">All</a></li>
                 <?php foreach ($a as $item) : ?>
                     <li><a href="?request=home&cate=<?= $item['id'] ?>"><?= $item['name'] ?></a></li>

@@ -2,7 +2,7 @@
     <?php foreach ($glasses as $item) : ?>
         <div class="item">
             <div class="row">
-                <div class="img-product col-sm-6"><img src="img/upload/<?= $item['image'] ?>" alt=""></div>
+                <div class="img-product col-sm-6"><img src="img/upload/<?= $item['image'] ?>" alt="" height="200"></div>
                 <div class="content-product col-sm-6">
                     <h3><a style="font-size: 28px;" href="?request=detail&id=<?= $item['id'] ?>"><?= $item['brand'] ?> - <?= $item['name'] ?></a></h3>
                     <div class="flex-center price" style="justify-content:space-between;">

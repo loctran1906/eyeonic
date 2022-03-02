@@ -28,5 +28,4 @@ $ac = new AdminController();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
 </html>
