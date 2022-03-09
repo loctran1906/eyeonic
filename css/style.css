@@ -6,7 +6,7 @@
 }
 body {
   overflow-x: hidden;
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Helvetica', cursive;
 }
 .flex-center {
   display: flex;

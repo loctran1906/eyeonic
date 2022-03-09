@@ -16,7 +16,7 @@
             <tr>
                 <th scope="row"><?= $item['id'] ?></th>
                 <td><?= $item['name'] ?></td>
-                <td><?= $item['description'] ?></td>
+                <td style="overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;  max-width: 150px;"><?= $item['description'] ?></td>
                 <td><?= $item['status'] == 1 ? 'Active' : 'Deactive' ?></td>
                 <td><a href="?request=updatebrand&id=<?= $item['id'] ?>">Edit</a></td>
                 <td><a href="?request=deletebrand&id=<?= $item['id'] ?>" onclick="return confirm('Bạn chắc chắn xóa')">Xóa</a></td>

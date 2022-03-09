@@ -160,6 +160,7 @@ class AdminController
                     header("location: ?request=listcustomer");
                     break;
                 case 'homepageconfig':
+                    $this->am->bannerHome();
                     include "../views/admin/home/config.php";
                     break;
             endswitch;
