@@ -22,7 +22,7 @@ class AdminModel
     // action for brand
     function addBrand()
     {
-        return $this->connect->query("insert brand(name,status) values ('" . $_POST['name'] . "', '" . $_POST['status'] . "')");
+        return $this->connect->query("insert brand(name,description,status) values ('" . $_POST['name'] . "','".$_POST['description']."', '" . $_POST['status'] . "')");
     }
     function getAllBrand()
     {
@@ -55,9 +55,10 @@ class AdminModel
     function updateBrand()
     {
         $name = $_POST['name'];
+        $description = $_POST['description'];
         $status = $_POST['status'];
 
-        return $this->connect->query("update brand set name='$name',  status='$status' where id = " . $_GET['id']);
+        return $this->connect->query("update brand set name='$name', description='$description', status='$status' where id = " . $_GET['id']);
     }
     function deleteBrand()
     {
@@ -142,7 +143,7 @@ class AdminModel
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
         date_default_timezone_set('Asia/Saigon');
         $date = date('Y-m-d H:i:s');
-        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" . $_POST['name'] . "','$image', '" . addslashes($_POST['description']) . "', '" . $_POST['price'] . "','" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . addslashes($_POST['description']) . "', '$date', '$_SESSION[admin]')");
+        return $this->connect->query("insert glasses(name,image, description, price,brand_id, cate_id, detail, created_at, created_by) values ('" .addslashes( $_POST['name'] )  . "','$image', '" . addslashes($_POST['description']) . "', '" . $_POST['price'] . "','" . $_POST['brand'] . "', '" . $_POST['cate'] . "', '" . addslashes($_POST['detail']) . "', '$date', '$_SESSION[admin]')");
     }
     function getAllGlasses()
     {
@@ -176,12 +177,12 @@ class AdminModel
     {
         date_default_timezone_set('Asia/Saigon');
         $date = date('Y-m-d H:i:s');
-        $name = $_POST['name'];
-        $description = $_POST['description'];
+        $name = addslashes($_POST['name']);
+        $description = addslashes($_POST['description']);
         $price = $_POST['price'];
         $brand_id = $_POST['brand'];
         $cate_id = $_POST['cate'];
-        $detail = $_POST['detail'];
+        $detail = addslashes($_POST['detail']);
         $status = $_POST['status'];
         if ($_FILES['image']['size'] !== 0) :
             $image = basename('update_' . $_FILES['image']['name']);

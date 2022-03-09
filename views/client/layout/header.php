@@ -1,3 +1,4 @@
+<?php $cc = new ClientController(); ?>
 <div class="header">
     <div class="container">
         <div class="row">
@@ -24,11 +25,7 @@
                                         Product
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="?request=eyeglasses">Eyeglasses</a>
-                                        <a class="dropdown-item" href="?request=glasses">Glasses</a>
-                                        <a class="dropdown-item" href="?request=sunglasses">Sun Glasses</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="?request=lens">Lens</a>
+                                        <?php $cc->routes4(); ?>
                                     </div>
                                 </li>
                                 <li class="nav-item">

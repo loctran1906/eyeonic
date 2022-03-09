@@ -8,6 +8,9 @@
     <div class="form-group">
         <label for="imagename">Select Image File to Upload:</label>
         <input type="file" class="form-control" id="imagename" name="image">
+        <div id='img_contain'>
+            <img id="image-preview" align='middle' src="../img/upload/<?=$id['image']?>" alt="your image" title='' width="500" height="250"/>
+        </div>
     </div>
     <div class="form-group">
         <label for="description">Description</label>

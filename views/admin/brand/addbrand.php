@@ -6,6 +6,10 @@
         <input type="text" class="form-control" id="brandname" name="name">
     </div>
     <div class="form-group">
+        <label for="branddescription">Short description</label>
+        <input type="text" class="form-control" id="branddescription" name="description">
+    </div>
+    <div class="form-group">
         <label for="">Status</label>
         <div class="form-check">
             <div class="form-check form-check-inline">

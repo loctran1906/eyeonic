@@ -4,7 +4,7 @@
     <div class="row">
         <?php foreach ($more as $item) : ?>
             <div class="col-md-4">
-                <div style="padding: 10px 25%; text-align:center; transition: transform .2s;" class="imageMore"><a href="?request=detail&id=<?= $item['id'] ?>"><img src="img/upload/<?= $item['image'] ?>" alt="" style="max-width: 200px"></a></div>
+                <div class="imageMore"><a href="?request=detail&id=<?= $item['id'] ?>"><img src="img/upload/<?= $item['image'] ?>" alt="" style="max-width: 200px"></a></div>
                 <div style="padding: 10px 25%; text-align:center;"><h3><a style="font-size: 28px;" href="?request=detail&id=<?= $item['id'] ?>"><?= $item['brand'] ?> - <?= $item['name'] ?></a></h3></div>
             </div>
         <?php endforeach; ?>

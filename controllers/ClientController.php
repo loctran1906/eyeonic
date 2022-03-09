@@ -16,11 +16,11 @@ class ClientController
     function routes()
     {
         if (isset($_GET['request'])) :
+            $b = $this->cm->getBrand();
             switch ($_GET['request']): //tiếp nhận lại biến get trên thanh địa chỉ
                 case 'home':
                     $glasses = $this->cm->showGlasses();
                     $a = $this->cm->getProd();
-                    $b = $this->cm->getBrand();
                     include "views/home.php"; //lấy nội dung tương ứng để hiển thị
                     break;
                 case 'contact':
@@ -47,8 +47,31 @@ class ClientController
                 case 'sunglasses':
                     include "views/client/product/sunglasses.php";
                     break;
-                case 'lens':
-                    include "views/client/product/lens.php";
+                case 'brand':
+                    if (isset($_GET['id'])) :
+                        switch ($_GET['id']): //tiếp nhận lại biến get trên thanh địa chỉ
+                            case '1':
+                                $brand = $this->cm->getBrandFollowId();
+                                $glasses = $this->cm->showGlassesFollowBrand();
+                                include "views/client/product/show-glasses-brand.php";
+                                break;
+                            case '2':
+                                $brand = $this->cm->getBrandFollowId();
+                                $glasses = $this->cm->showGlassesFollowBrand();
+                                include "views/client/product/show-glasses-brand.php";
+                                break;
+                            case '3':
+                                $brand = $this->cm->getBrandFollowId();
+                                $glasses = $this->cm->showGlassesFollowBrand();
+                                include "views/client/product/show-glasses-brand.php";
+                                break;
+                            case '4':
+                                $brand = $this->cm->getBrandFollowId();
+                                $glasses = $this->cm->showGlassesFollowBrand();
+                                include "views/client/product/show-glasses-brand.php";
+                                break;
+                        endswitch;
+                    endif;
                     break;
                 case 'detail':
                     if (isset($_GET['id'])) :
@@ -110,6 +133,16 @@ class ClientController
         else :
             $glasses = $this->cm->showNewGlasses();
             include "views/client/product/new-glasses.php";
+        endif;
+    }
+    function routes4()
+    {
+        if (isset($_GET['request'])) :
+            $b = $this->cm->getBrand();
+            include "views/client/product/brand.php";
+        else :
+            $b = $this->cm->getBrand();
+            include "views/client/product/brand.php";
         endif;
     }
 }

@@ -8,7 +8,9 @@
     <div class="form-group">
         <label for="imagename">Select Image File to Upload:</label>
         <input type="file" class="form-control" id="imagename" name="image" accept="image/*">
-
+        <div id='img_contain'>
+            <img id="image-preview" align='middle' src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="your image" title='' width="300" height="300"/>
+        </div>
     </div>
     <div class="form-group">
         <label for="description">Description</label>

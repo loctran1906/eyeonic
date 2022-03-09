@@ -66,11 +66,25 @@ class ClientModel
     }
     function showDetailGlasses()
     {
-        $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 and glasses.id = ".$_GET['id']);
+        $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 and glasses.id = " . $_GET['id']);
         return mysqli_fetch_array($result);
     }
     function showMoreGlasses()
     {
         return $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 order by id desc LIMIT 3;");
+    }
+    function showGlassesFollowBrand()
+    {
+        if (isset($_GET['request'])) {
+            if (isset($_GET['id'])) {
+                $result = $this->connect->query("SELECT glasses.*, category.name as cate, brand.name AS brand FROM ((glasses INNER JOIN category ON glasses.cate_id = category.id) INNER JOIN brand ON glasses.brand_id = brand.id) where glasses.status = 1 and brand_id = " . $_GET['id']);
+            }
+        }
+        return $result;
+    }
+    function getBrandFollowId()
+    {
+        $result = $this->connect->query("select * from brand where status = 1 and id = ".$_GET['id']);
+        return mysqli_fetch_array($result);
     }
 }

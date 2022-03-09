@@ -159,6 +159,9 @@ class AdminController
                     $this->am->deleteCustomer();
                     header("location: ?request=listcustomer");
                     break;
+                case 'homepageconfig':
+                    include "../views/admin/home/config.php";
+                    break;
             endswitch;
         endif;
     }
