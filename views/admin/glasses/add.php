@@ -9,7 +9,7 @@
         <label for="imagename">Select Image File to Upload:</label>
         <input type="file" class="form-control" id="imagename" name="image" accept="image/*">
         <div id='img_contain'>
-            <img id="image-preview" align='middle' src="../img/header/1.jpg" alt="your image" title='' height="300"/>
+            <img id="image-preview" align='middle' src="../img/header/1.jpg" alt="your image" title='' height="250"/>
         </div>
     </div>
     <div class="form-group">
