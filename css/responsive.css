@@ -1,11 +1,25 @@
 @media (max-width: 767px) {
-    .hidden-desc {display: none;}
-    .content-product {padding: 0;}
-    .image-of-all {height: auto !important;}
+  .hidden-desc {
+    display: none;
+  }
+  .content-product {
+    padding: 0;
+  }
+  .image-of-all {
+    height: auto !important;
+  }
 }
 @media (max-width: 1199px) {
-    .all-home {margin-top: 0!important;}
+  .all-home {
+    margin-top: 0 !important;
+  }
 }
-@media (max-width: 575) {
-    
+@media (max-width: 991px) {
+  .header-mobile {
+    position: absolute;
+    width: 50%;
+    padding: 30px;
+    background: #343a40;
+    right: 0;
+  }
 }
