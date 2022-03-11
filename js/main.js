@@ -20,7 +20,15 @@ $(document).ready(function () {
     asNavFor: '.slider-for',
     dots: true,
     focusOnSelect: true,
-    centerMode: false
+    centerMode: false,
+    responsive: [
+      {
+        breakpoint: 790,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   })
   $('.nav-link-collapse').on('click', function () {
     $('.nav-link-collapse')
@@ -34,7 +42,7 @@ $(document).ready(function () {
     '<nav aria-label="Page navigation example" class="datapagi flex-center"></nav>'
   )
   var rowsShown = 9
-  var rowsTotal = $('#datapagi .col-sm-4').length
+  var rowsTotal = $('#datapagi .col-md-4').length
   var numPages = rowsTotal / rowsShown
   for (i = 0; i < numPages; i++) {
     var pageNum = i + 1
@@ -46,8 +54,8 @@ $(document).ready(function () {
         '</a></li></ul>'
     )
   }
-  $('#datapagi .col-sm-4').hide()
-  $('#datapagi .col-sm-4')
+  $('#datapagi .col-md-4').hide()
+  $('#datapagi .col-md-4')
     .slice(0, rowsShown)
     .show()
   $('.datapagi ul li a:first').addClass('active')
@@ -57,7 +65,7 @@ $(document).ready(function () {
     var currPage = $(this).attr('rel')
     var startItem = currPage * rowsShown
     var endItem = startItem + rowsShown
-    $('#datapagi .col-sm-4')
+    $('#datapagi .col-md-4')
       .css('opacity', '0.0')
       .hide()
       .slice(startItem, endItem)

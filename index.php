@@ -24,13 +24,14 @@ $cc = new ClientController();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
 </head>
 
 <body>
     <?php include "views/client/layout/header.php"; ?>
-    <article style="margin-top: 82px;">
+    <article class="all-home">
         <?php $cc->routes(); ?>
     </article>
     <?php include "views/client/layout/footer.php"; ?>

@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+    .hidden-desc {display: none;}
+    .content-product {padding: 0;}
+    .image-of-all {height: auto !important;}
+}
+@media (max-width: 1199px) {
+    .all-home {margin-top: 0!important;}
+}
+@media (max-width: 575) {
+    
+}

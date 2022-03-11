@@ -6,10 +6,10 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <div class="row" id="datapagi">
                 <?php foreach ($glasses as $item) : ?>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="item-productbrand" style="position: relative;">
                             <div style="width:100%"><a href="?request=detail&id=<?= $item['id'] ?>"><img src="img/upload/<?= $item['image'] ?>" alt="" height="120"></a></div>
                             <h3 style="height: 100px;"><a style="font-size: 28px;" href="?request=detail&id=<?= $item['id'] ?>"><?= $item['brand'] ?> - <?= $item['name'] ?></a></h3>
